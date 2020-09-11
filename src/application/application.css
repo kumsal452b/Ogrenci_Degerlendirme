@@ -1,7 +1,12 @@
 .anchorpane  {
 	
 }
-.button:mousehover{
+.button:hover{
 	-fx-background-color: black ;
 	-fx-text-fill: white ;
+	-fx-border-style: dotted;
+	-fx-background-radius: 50px;
 } 
+.button{
+	-fx-border-style: dotted;
+}
