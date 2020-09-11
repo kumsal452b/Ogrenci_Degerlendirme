@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="400.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="400.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
             <Label layoutX="98.0" layoutY="80.0" text="Devam etmek için bir seçim yapınız" textFill="#f8f8f8" />
             <Label layoutX="48.0" layoutY="32.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#d0d0d0">
@@ -16,11 +16,15 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="106.0" layoutY="112.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
-            <Button layoutX="106.0" layoutY="185.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
-            <Button layoutX="106.0" layoutY="257.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
-            <Button layoutX="106.0" layoutY="323.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
+            <Button layoutX="106.0" layoutY="112.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
+            <Button layoutX="106.0" layoutY="185.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
+            <Button layoutX="106.0" layoutY="257.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
+            <Button layoutX="106.0" layoutY="323.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
          </children>
       </AnchorPane>
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" />
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" />
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" />
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" />
    </children>
 </AnchorPane>
