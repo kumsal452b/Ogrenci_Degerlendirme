@@ -12,3 +12,6 @@
 	-fx-text-fill: beige ;
 	
 	}
+.label{
+	-fx-background-color: rgb(188,182,53);
+}

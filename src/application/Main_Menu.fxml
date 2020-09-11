@@ -22,18 +22,9 @@
             <Button layoutX="106.0" layoutY="323.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Kayıt İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" layoutX="-2.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
@@ -42,16 +33,25 @@
       </AnchorPane>
       <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" layoutY="-2.0" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" layoutX="7.0" layoutY="7.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Kayıt İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
