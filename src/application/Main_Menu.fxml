@@ -7,7 +7,43 @@
 
 <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane prefHeight="410.0" prefWidth="410.0">
+      <AnchorPane fx:id="kokCikti" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutY="-2.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
             <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
             <Button layoutX="101.0" layoutY="165.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
@@ -19,42 +55,6 @@
                </font>
             </Label>
             <Button layoutX="101.0" layoutY="317.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Kayıt İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" layoutX="7.0" layoutY="7.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
          </children>
       </AnchorPane>
    </children>

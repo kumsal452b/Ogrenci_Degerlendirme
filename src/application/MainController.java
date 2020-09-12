@@ -18,29 +18,43 @@ public class MainController {
     private AnchorPane kokMain;
 
     @FXML
+    private AnchorPane kokRapor;
+
+    @FXML
+    private AnchorPane kokHesap;
+
+    @FXML
+    private AnchorPane kokKayit;
+    
+    @FXML
+    private AnchorPane kokCikti;
+
+    @FXML
     void cikti(ActionEvent event) {
+    	kokCikti.toFront();
 
     }
 
     @FXML
     void hesaplama(ActionEvent event) {
+    	kokHesap.toFront();
 
     }
 
     @FXML
     void kayit(ActionEvent event) {
+    	kokKayit.toFront();
 
     }
 
     @FXML
     void raporlama(ActionEvent event) {
+    	kokRapor.toFront();
 
     }
 
     @FXML
     void initialize() {
-    	kokMain.toFront();
-        assert kokMain != null : "fx:id=\"kokMain\" was not injected: check your FXML file 'Main_Menu.fxml'.";
-
+        kokMain.toFront();
     }
 }

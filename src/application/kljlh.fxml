@@ -3,6 +3,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+	 <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Kayıt İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutX="7.0" layoutY="7.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
 </AnchorPane>
 
