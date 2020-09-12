@@ -35,7 +35,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
             <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
             <Button layoutX="101.0" layoutY="165.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
@@ -56,15 +56,15 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="109.0" layoutY="81.0" />
+            <TextField fx:id="textad" layoutX="109.0" layoutY="81.0" />
             <Label layoutX="109.0" layoutY="57.0" text="Ad" />
-            <TextField layoutX="109.0" layoutY="153.0" />
+            <TextField fx:id="textsoyad" layoutX="109.0" layoutY="153.0" />
             <Label layoutX="109.0" layoutY="128.0" text="Soyad" />
-            <TextField layoutX="109.0" layoutY="217.0" />
+            <TextField fx:id="textnumara" layoutX="109.0" layoutY="217.0" />
             <Label layoutX="109.0" layoutY="192.0" text="Numara" />
-            <TextField layoutX="109.0" layoutY="274.0" />
+            <TextField fx:id="textvize" layoutX="109.0" layoutY="274.0" />
             <Label layoutX="113.0" layoutY="251.0" text="Vize" />
-            <TextField layoutX="109.0" layoutY="331.0" />
+            <TextField fx:id="textfinal" layoutX="109.0" layoutY="331.0" />
             <Label layoutX="109.0" layoutY="307.0" text="Final" />
             <Button layoutX="268.0" layoutY="81.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
             <Button fx:id="kok_kayit_geri" layoutX="316.0" layoutY="81.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
