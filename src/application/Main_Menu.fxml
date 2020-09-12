@@ -66,8 +66,8 @@
             <Label layoutX="113.0" layoutY="251.0" text="Vize" />
             <TextField layoutX="109.0" layoutY="331.0" />
             <Label layoutX="109.0" layoutY="307.0" text="Final" />
-            <Button layoutX="268.0" layoutY="81.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" text="Kayit" />
-            <Button layoutX="316.0" layoutY="81.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" text="Geri" />
+            <Button layoutX="268.0" layoutY="81.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
+            <Button fx:id="kok_kayit_geri" layoutX="316.0" layoutY="81.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
          </children>
       </AnchorPane>
    </children>

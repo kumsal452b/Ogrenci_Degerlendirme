@@ -15,3 +15,12 @@
 .label{
 	-fx-background-color: rgb(188,182,53);
 }
+.button1{
+	-fx-background-color: linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(0,229,255) 0.0, rgb(0,0,0) 100.0);
+	
+	-fx-text-fill: white ;
+}
+.button2{
+	-fx-background-color:linear-gradient( from 0.0% 0.0% to 100.0% 100.0%, rgb(255,62,0) 0.0, rgb(0,0,0) 100.0);
+	-fx-text-fill: white ;
+}
