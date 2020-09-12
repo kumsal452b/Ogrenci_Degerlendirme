@@ -56,18 +56,19 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textad" layoutX="109.0" layoutY="81.0" />
-            <Label layoutX="109.0" layoutY="57.0" text="Ad" />
-            <TextField fx:id="textsoyad" layoutX="109.0" layoutY="153.0" />
-            <Label layoutX="109.0" layoutY="128.0" text="Soyad" />
-            <TextField fx:id="textnumara" layoutX="109.0" layoutY="217.0" />
-            <Label layoutX="109.0" layoutY="192.0" text="Numara" />
-            <TextField fx:id="textvize" layoutX="109.0" layoutY="274.0" />
-            <Label layoutX="113.0" layoutY="251.0" text="Vize" />
-            <TextField fx:id="textfinal" layoutX="109.0" layoutY="331.0" />
-            <Label layoutX="109.0" layoutY="307.0" text="Final" />
-            <Button layoutX="268.0" layoutY="81.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
-            <Button fx:id="kok_kayit_geri" layoutX="316.0" layoutY="81.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
+            <TextField fx:id="textad" layoutX="131.0" layoutY="80.0" />
+            <Label layoutX="131.0" layoutY="56.0" text="Ad" />
+            <TextField fx:id="textsoyad" layoutX="131.0" layoutY="152.0" />
+            <Label layoutX="131.0" layoutY="127.0" text="Soyad" />
+            <TextField fx:id="textnumara" layoutX="131.0" layoutY="216.0" />
+            <Label layoutX="131.0" layoutY="191.0" text="Numara" />
+            <TextField fx:id="textvize" layoutX="131.0" layoutY="273.0" />
+            <Label layoutX="135.0" layoutY="250.0" text="Vize" />
+            <TextField fx:id="textfinal" layoutX="131.0" layoutY="330.0" />
+            <Label layoutX="131.0" layoutY="306.0" text="Final" />
+            <Button layoutX="290.0" layoutY="80.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
+            <Button fx:id="kok_kayit_geri" layoutX="78.0" layoutY="79.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
+            <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button2" text="Kapat" />
          </children>
       </AnchorPane>
    </children>
