@@ -5,21 +5,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="400.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane prefHeight="410.0" prefWidth="410.0">
          <children>
-            <Label layoutX="98.0" layoutY="80.0" text="Devam etmek için bir seçim yapınız" textFill="#f8f8f8" />
-            <Label layoutX="48.0" layoutY="32.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#d0d0d0">
+            <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
+            <Button layoutX="101.0" layoutY="165.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
+            <Button layoutX="101.0" layoutY="241.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
+            <Label layoutX="101.0" layoutY="65.0" text="Devam etmek için bir seçim yapınız" />
+            <Label layoutX="52.0" layoutY="30.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#170b0b">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="106.0" layoutY="112.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
-            <Button layoutX="106.0" layoutY="185.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
-            <Button layoutX="106.0" layoutY="257.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
-            <Button layoutX="106.0" layoutY="323.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
+            <Button layoutX="101.0" layoutY="317.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
@@ -31,7 +30,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
             <Label alignment="CENTER" layoutX="7.0" layoutY="8.0" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
                <font>
