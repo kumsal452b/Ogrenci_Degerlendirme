@@ -2,7 +2,9 @@ package application;
 
 public class Kayitlar {
 	String ad,soyad,numara,vize,finall,b_n,h_n;
-
+	public Kayitlar() {
+		
+	}
 	public Kayitlar(String ad, String soyad, String numara, String vize, String finall, String b_n, String h_n) {
 		super();
 		this.ad = ad;
