@@ -9,18 +9,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="450.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane fx:id="kokCikti" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokCikti" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" layoutY="-2.0" prefHeight="30.0" prefWidth="410.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" layoutY="-2.0" prefWidth="500.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokMain" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
             <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
             <Button layoutX="101.0" layoutY="165.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
@@ -34,9 +34,9 @@
             <Button layoutX="101.0" layoutY="317.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokKayit" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokKayit" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Kayit İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefWidth="500.0" text="Kayit İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
@@ -56,9 +56,9 @@
             <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
          </children>
       </AnchorPane>
-       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+       <AnchorPane fx:id="kokHesap" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefWidth="500.0" text="Hesap İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
@@ -88,14 +88,16 @@
             <Button fx:id="kok_hesaplama_geri" layoutX="157.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button2" text="Geri" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokRapor" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefWidth="500.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <PieChart fx:id="piachart" layoutY="30.0" prefHeight="381.0" prefWidth="410.0" />
+            <PieChart fx:id="piachart" layoutY="30.0" prefHeight="500.0" prefWidth="500.0" />
+            <Button fx:id="kok_raporlama_geri" layoutX="452.0" layoutY="288.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button2" text="Geri" />
+            <Button fx:id="kokraporlama_kpt" layoutX="452.0" layoutY="35.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button3" text="Kpt" />
          </children>
       </AnchorPane>
    </children>
