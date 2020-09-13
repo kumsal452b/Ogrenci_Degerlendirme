@@ -99,6 +99,12 @@ public class MainController {
 
     @FXML
     private Button kok_hesaplama_geri;
+    
+    @FXML
+    private Button kok_raporlama_geri;
+    
+    @FXML
+    private Button kok_raporlama_kpt;
 
     @FXML
     void kayitet(ActionEvent event) throws IOException {
@@ -441,6 +447,14 @@ public class MainController {
 			}
 		});
         kok_hesaplama_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				kokMain.toFront();
+				
+			}
+		});
+        kok_raporlama_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
 			public void handle(MouseEvent event) {

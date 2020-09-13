@@ -97,7 +97,7 @@
             </Label>
             <PieChart fx:id="piachart" layoutY="30.0" prefHeight="500.0" prefWidth="500.0" />
             <Button fx:id="kok_raporlama_geri" layoutX="452.0" layoutY="288.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button2" text="Geri" />
-            <Button fx:id="kokraporlama_kpt" layoutX="452.0" layoutY="35.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button3" text="Kpt" />
+            <Button fx:id="kok_raporlama_kpt" layoutX="452.0" layoutY="35.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button3" text="Kpt" />
          </children>
       </AnchorPane>
    </children>
