@@ -68,7 +68,7 @@
             <Label layoutX="131.0" layoutY="306.0" text="Final" />
             <Button layoutX="290.0" layoutY="80.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
             <Button fx:id="kok_kayit_geri" layoutX="78.0" layoutY="79.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
-            <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button2" text="Kapat" />
+            <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
          </children>
       </AnchorPane>
    </children>

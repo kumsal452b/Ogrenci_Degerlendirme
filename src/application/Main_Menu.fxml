@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -20,15 +22,6 @@
       <AnchorPane fx:id="kokRapor" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
          <children>
             <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
@@ -69,6 +62,26 @@
             <Button layoutX="290.0" layoutY="80.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
             <Button fx:id="kok_kayit_geri" layoutX="78.0" layoutY="79.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
             <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="kokHesap" prefHeight="410.0" prefWidth="410.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="410.0" text="Hesap İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TableView layoutX="-2.0" layoutY="75.0" prefHeight="220.0" prefWidth="410.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Ad" />
+                <TableColumn prefWidth="75.0" text="Soyad" />
+                  <TableColumn prefWidth="55.0" text="Numara" />
+                  <TableColumn prefWidth="50.0" text="Vize" />
+                  <TableColumn prefWidth="43.0" text="Final" />
+                  <TableColumn prefWidth="44.0" text="B.P" />
+                  <TableColumn prefWidth="66.0" text="H.N" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>
