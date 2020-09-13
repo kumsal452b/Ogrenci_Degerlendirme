@@ -182,19 +182,11 @@ public class MainController {
 		satir=0;
 		int a = 0,b = 0,c = 0;
 		int count2=0;
-		String not="",durumS="";
+		String durumS="";
 		boolean karar=true;
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 7; j++) {
-				count = 0;
-//				if (bilgiler[i][j].equals("")) {
-//					i=9;
-//					break;
-//				}
-				
-				count = 0;
-				//Vizr ve final notlarýnýn bulunduðu sutun bulunup gerekkli
-				//iþlemler yürütülüyor
+				count = 0;	
 				if (counter % 7 == 6 || counter % 7 == 5) {
 					if (karar) {
 						try {
@@ -214,7 +206,7 @@ public class MainController {
 					karar=false;
 			
 					if (count2==2) {
-						not=c+"";
+//						not=c+"";
 						if (100>= c && c>75) {
 							durumS="A";
 						}
@@ -236,14 +228,12 @@ public class MainController {
 				}else {
 					bilgiler2[satir][j]=bilgiler[satir][j];
 				}
-//				bosluk = "";
 				count = 0;
 				counter++;
 			}
 			karar=true;
 			satir++;
 			counter=0;
-			System.out.println();
 		}
 
 		for (int i = 0; i < 10; i++) {
@@ -289,6 +279,14 @@ public class MainController {
         tbl_vize.setCellValueFactory(new PropertyValueFactory<>("vize"));
         tbl_no.setCellValueFactory(new PropertyValueFactory<>("numara"));
         kok_kayit_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				kokMain.toFront();
+				
+			}
+		});
+        kok_hesaplama_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
 			public void handle(MouseEvent event) {
