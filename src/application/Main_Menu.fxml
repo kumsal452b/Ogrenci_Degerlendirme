@@ -71,17 +71,29 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TableView layoutX="-2.0" layoutY="75.0" prefHeight="220.0" prefWidth="410.0">
+            <TableView fx:id="tbl" layoutX="-2.0" layoutY="75.0" prefHeight="220.0" prefWidth="410.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Ad" />
-                <TableColumn prefWidth="75.0" text="Soyad" />
-                  <TableColumn prefWidth="55.0" text="Numara" />
-                  <TableColumn prefWidth="50.0" text="Vize" />
-                  <TableColumn prefWidth="43.0" text="Final" />
-                  <TableColumn prefWidth="44.0" text="B.P" />
-                  <TableColumn prefWidth="66.0" text="H.N" />
+                <TableColumn fx:id="tbl_ad" prefWidth="75.0" text="Ad" />
+                <TableColumn fx:id="tbl_soyad" prefWidth="75.0" text="Soyad" />
+                  <TableColumn fx:id="tbl_no" prefWidth="55.0" text="Numara" />
+                  <TableColumn fx:id="tbl_vize" prefWidth="50.0" text="Vize" />
+                  <TableColumn fx:id="tbl_final" prefWidth="43.0" text="Final" />
+                  <TableColumn fx:id="tbl_bp" prefWidth="44.0" text="B.P" />
+                  <TableColumn fx:id="tbl_hn" prefWidth="66.0" text="H.N" />
               </columns>
             </TableView>
+            <Label layoutX="14.0" layoutY="306.0" text="B.P: Basari Puani">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="347.0" prefHeight="28.0" prefWidth="137.0" text="H.N: Harf Notu">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="guncellle" layoutX="157.0" layoutY="306.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button3" text="Güncelle" />
+            <Button fx:id="kok_hesaplama_geri" layoutX="157.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button2" text="Geri" />
          </children>
       </AnchorPane>
    </children>
