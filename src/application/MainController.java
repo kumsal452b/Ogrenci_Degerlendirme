@@ -15,6 +15,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -65,6 +66,9 @@ public class MainController {
 
     @FXML
     private TextField textfinal;
+    
+    @FXML
+    private PieChart piachart;
     
     @FXML
     private TableView<Kayitlar> tbl;
@@ -259,11 +263,160 @@ public class MainController {
     	kokKayit.toFront();
 
     }
+    ObservableList<PieChart.Data> piechartdata;
 
     @FXML
-    void raporlama(ActionEvent event) {
+    void raporlama(ActionEvent event) throws IOException {
     	kokRapor.toFront();
+    	String[][] bilgiler = new String[10][5];
+		String[][] bilgiler2 = new String[10][7];
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 5; j++) {
+				bilgiler[i][j] = "";
+			}
+		}
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 7; j++) {
+				bilgiler2[i][j] = "";
+			}
+		}
+		int satir = 0;
+		int sutun = 0;
+		int ch = fileReader.read();
+		//okuma mekanizmasý yukarýda anlatýldý
+		while (ch != -1) {
+			if (ch != '-') {
+				if (ch != '*') {
+					if (sayac == 0) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 1) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 2) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 3) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 4) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
 
+				} else {
+					sayac++;
+				}
+			} else {
+				sayac = 0;
+				satir++;
+			}
+			ch = fileReader.read();
+		}
+		int count = 0;
+		int counter = 0;
+		satir=0;
+		int a = 0,b = 0,c = 0;
+		int count2=0;
+		String durumS="";
+		boolean karar=true;
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 7; j++) {
+				count = 0;	
+				if (counter % 7 == 6 || counter % 7 == 5) {
+					if (karar) {
+						try {
+							a=(int) (Integer.parseInt(bilgiler[satir][3])*0.4);
+						} catch (Exception e) {
+							continue;
+						}
+						count2++;
+					}
+					else{
+						b=(int) (Integer.parseInt(bilgiler[satir][4])*0.6);
+						count2++;
+						c=a+b;
+						bilgiler2[satir][j-1]=c+"";
+					}
+					
+					karar=false;
+			
+					if (count2==2) {
+//						not=c+"";
+						if (100>= c && c>75) {
+							durumS="A";
+						}
+						else if (75>= c && c>50) {
+							durumS="B";
+						}
+						else if (50>= c && c>25) {
+							durumS="C";
+						}
+						else if (25>= c && c>0) {
+							durumS="D";
+						}
+						else {
+							durumS="Belirsiz";
+						}
+						bilgiler2[satir][j]=durumS;
+					}
+					
+				}else {
+					bilgiler2[satir][j]=bilgiler[satir][j];
+				}
+				count = 0;
+				counter++;
+			}
+			karar=true;
+			satir++;
+			counter=0;
+		}
+		int toplamNot=0;
+		int kisisayisi=0;
+		counter=0;
+		for (int i = 0; i < 10; i++) {
+			for (int k = 0; k <7; k++) {
+				if (bilgiler2[i][k].equals("")){
+					k=6;
+					kisisayisi--;	
+					break;
+				}
+				if (counter%7==5) {
+					int not=Integer.valueOf(bilgiler2[i][k]);
+					toplamNot+=not;
+				}
+				counter++;
+			}
+			counter=0;
+			kisisayisi++;
+		}
+		counter=0;
+		String ad_soyad="";
+		int AnlikBasariPuani=0;
+		PieChart.Data nesneData;
+		for (int i = 0; i < 10; i++) {
+			for (int k = 0; k <7; k++) {
+				if (bilgiler2[i][k].equals("")){
+					k=6;
+					break;
+				}
+				if (counter%7==0 || counter%7==1) {
+					ad_soyad+=bilgiler2[i][k];
+					ad_soyad+=" ";
+				}
+				if (counter%7==5){
+					AnlikBasariPuani=Integer.valueOf(bilgiler2[i][k]);
+					double sonuc=(double)100*AnlikBasariPuani/toplamNot;
+					System.out.println(sonuc);
+					System.out.println(ad_soyad);
+					nesneData=new PieChart.Data(ad_soyad,sonuc);
+					piechartdata.add(nesneData);
+				}
+				counter++;
+			}
+			ad_soyad="";
+			counter=0;
+		}
+    	piachart.setData(piechartdata);
     }
 
     @FXML
@@ -271,6 +424,7 @@ public class MainController {
     	fileReader = new FileReader("D:\\ogrbilgileri3.txt");
         kokMain.toFront();
         kayit=FXCollections.observableArrayList();
+        piechartdata=FXCollections.observableArrayList();
         tbl_ad.setCellValueFactory(new PropertyValueFactory<>("ad"));
         tbl_soyad.setCellValueFactory(new PropertyValueFactory<>("soyad"));
         tbl_bp.setCellValueFactory(new PropertyValueFactory<>("b_n"));
