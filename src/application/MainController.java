@@ -245,30 +245,25 @@ public class MainController {
 			counter=0;
 			System.out.println();
 		}
-		System.out.println("AD        |SOYAD     |NUMARA    |NOT       |DURUM");
-		System.out.println("________________________________________________________");
+
 		for (int i = 0; i < 10; i++) {
 			for (int k = 0; k < 7; k++) {
 				if (bilgiler2[i][k].equals("")) {
 					i=9;
 					break;
 				}
-				String yedek = bilgiler2[i][k];
-				String bosluk = "";
-				int sayim = 10 - yedek.length();
-				while (sayim > count) {
-					bosluk += " ";
-					count++;
-				}
-				count=0;
-				System.out.print(bilgiler2[i][k]+bosluk+"|");
+				nesne=new Kayitlar(bilgiler2[i][0], bilgiler2[i][1], bilgiler2[i][2], bilgiler2[i][3], bilgiler2[i][4], bilgiler2[i][5], bilgiler2[i][6]);
+				kayit.add(nesne);
+				k=6;
 			}
-			System.out.println();
-			System.out.println("________________________________________________________");
+
 		}
+		tbl.setItems(kayit);
 
     }
+    
 
+    Kayitlar nesne=new Kayitlar();
     @FXML
     void kayit(ActionEvent event) {
     	kokKayit.toFront();
@@ -286,10 +281,10 @@ public class MainController {
     	fileReader = new FileReader("D:\\ogrbilgileri3.txt");
         kokMain.toFront();
         kayit=FXCollections.observableArrayList();
-        tbl_ad.setCellValueFactory(new PropertyValueFactory<>("adi"));
+        tbl_ad.setCellValueFactory(new PropertyValueFactory<>("ad"));
         tbl_soyad.setCellValueFactory(new PropertyValueFactory<>("soyad"));
-        tbl_bp.setCellValueFactory(new PropertyValueFactory<>("b_p"));
-        tbl_final.setCellValueFactory(new PropertyValueFactory<>("final"));
+        tbl_bp.setCellValueFactory(new PropertyValueFactory<>("b_n"));
+        tbl_final.setCellValueFactory(new PropertyValueFactory<>("finall"));
         tbl_hn.setCellValueFactory(new PropertyValueFactory<>("h_n"));
         tbl_vize.setCellValueFactory(new PropertyValueFactory<>("vize"));
         tbl_no.setCellValueFactory(new PropertyValueFactory<>("numara"));
