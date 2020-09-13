@@ -11,67 +11,34 @@
 
 <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="450.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <AnchorPane fx:id="kokCikti" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokRapor" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" layoutY="-2.0" prefWidth="500.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefWidth="500.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
+            <PieChart fx:id="piachart" layoutY="30.0" prefHeight="500.0" prefWidth="500.0" />
+            <Button fx:id="kok_raporlama_geri" layoutX="452.0" layoutY="288.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button2" text="Geri" />
+            <Button fx:id="kok_raporlama_kpt" layoutX="452.0" layoutY="35.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button3" text="Kpt" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokMain" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
-         <children>
-            <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
-            <Button layoutX="101.0" layoutY="165.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
-            <Button layoutX="101.0" layoutY="241.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
-            <Label layoutX="101.0" layoutY="65.0" text="Devam etmek için bir seçim yapınız" />
-            <Label layoutX="52.0" layoutY="30.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#170b0b">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Button layoutX="101.0" layoutY="317.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="kokKayit" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
-         <children>
-            <Label alignment="CENTER" prefWidth="500.0" text="Kayit İşlemleri" textFill="#f3ffa8">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <TextField fx:id="textad" layoutX="131.0" layoutY="80.0" />
-            <Label layoutX="131.0" layoutY="56.0" text="Ad" />
-            <TextField fx:id="textsoyad" layoutX="131.0" layoutY="152.0" />
-            <Label layoutX="131.0" layoutY="127.0" text="Soyad" />
-            <TextField fx:id="textnumara" layoutX="131.0" layoutY="216.0" />
-            <Label layoutX="131.0" layoutY="191.0" text="Numara" />
-            <TextField fx:id="textvize" layoutX="131.0" layoutY="273.0" />
-            <Label layoutX="135.0" layoutY="250.0" text="Vize" />
-            <TextField fx:id="textfinal" layoutX="131.0" layoutY="330.0" />
-            <Label layoutX="131.0" layoutY="306.0" text="Final" />
-            <Button layoutX="290.0" layoutY="80.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
-            <Button fx:id="kok_kayit_geri" layoutX="78.0" layoutY="79.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
-            <Button fx:id="kok_kayit_geri1" layoutX="78.0" layoutY="358.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
-         </children>
-      </AnchorPane>
-       <AnchorPane fx:id="kokHesap" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
+       <AnchorPane fx:id="kokHesap" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
             <Label alignment="CENTER" prefWidth="500.0" text="Hesap İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TableView fx:id="tbl" layoutX="-2.0" layoutY="75.0" prefHeight="220.0" prefWidth="410.0">
+            <TableView fx:id="tbl" layoutX="-2.0" layoutY="75.0" prefHeight="220.0" prefWidth="500.0">
               <columns>
-                <TableColumn fx:id="tbl_ad" prefWidth="75.0" text="Ad" />
-                <TableColumn fx:id="tbl_soyad" prefWidth="75.0" text="Soyad" />
-                  <TableColumn fx:id="tbl_no" prefWidth="55.0" text="Numara" />
-                  <TableColumn fx:id="tbl_vize" prefWidth="50.0" text="Vize" />
-                  <TableColumn fx:id="tbl_final" prefWidth="43.0" text="Final" />
-                  <TableColumn fx:id="tbl_bp" prefWidth="44.0" text="B.P" />
-                  <TableColumn fx:id="tbl_hn" prefWidth="66.0" text="H.N" />
+                <TableColumn fx:id="tbl_ad" prefWidth="94.0" text="Ad" />
+                <TableColumn fx:id="tbl_soyad" prefWidth="79.0" text="Soyad" />
+                  <TableColumn fx:id="tbl_no" prefWidth="57.0" text="Numara" />
+                  <TableColumn fx:id="tbl_vize" prefWidth="57.0" text="Vize" />
+                  <TableColumn fx:id="tbl_final" prefWidth="65.0" text="Final" />
+                  <TableColumn fx:id="tbl_bp" prefWidth="67.0" text="B.P" />
+                  <TableColumn fx:id="tbl_hn" text="H.N" />
               </columns>
             </TableView>
             <Label layoutX="14.0" layoutY="306.0" text="B.P: Basari Puani">
@@ -84,20 +51,53 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Button fx:id="guncellle" layoutX="157.0" layoutY="306.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button3" text="Güncelle" />
-            <Button fx:id="kok_hesaplama_geri" layoutX="157.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button2" text="Geri" />
+            <Button fx:id="guncellle" layoutX="239.0" layoutY="305.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button3" text="Güncelle" />
+            <Button fx:id="kok_hesaplama_geri" layoutX="239.0" layoutY="346.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="247.0" styleClass="button2" text="Geri" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokRapor" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
+      <AnchorPane fx:id="kokKayit" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
-            <Label alignment="CENTER" prefWidth="500.0" text="Raporlama İşlemleri" textFill="#f3ffa8">
+            <Label alignment="CENTER" prefWidth="500.0" text="Kayit İşlemleri" textFill="#f3ffa8">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <PieChart fx:id="piachart" layoutY="30.0" prefHeight="500.0" prefWidth="500.0" />
-            <Button fx:id="kok_raporlama_geri" layoutX="452.0" layoutY="288.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button2" text="Geri" />
-            <Button fx:id="kok_raporlama_kpt" layoutX="452.0" layoutY="35.0" mnemonicParsing="false" prefHeight="220.0" prefWidth="42.0" styleClass="button3" text="Kpt" />
+            <TextField fx:id="textad" layoutX="176.0" layoutY="125.0" />
+            <Label layoutX="176.0" layoutY="101.0" text="Ad" />
+            <TextField fx:id="textsoyad" layoutX="176.0" layoutY="197.0" />
+            <Label layoutX="176.0" layoutY="172.0" text="Soyad" />
+            <TextField fx:id="textnumara" layoutX="176.0" layoutY="261.0" />
+            <Label layoutX="176.0" layoutY="236.0" text="Numara" />
+            <TextField fx:id="textvize" layoutX="176.0" layoutY="318.0" />
+            <Label layoutX="180.0" layoutY="295.0" text="Vize" />
+            <TextField fx:id="textfinal" layoutX="176.0" layoutY="375.0" />
+            <Label layoutX="176.0" layoutY="351.0" text="Final" />
+            <Button layoutX="335.0" layoutY="125.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
+            <Button fx:id="kok_kayit_geri" layoutX="123.0" layoutY="124.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
+            <Button fx:id="kok_kayit_kpt" layoutX="123.0" layoutY="403.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokMain" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
+         <children>
+            <Button layoutX="154.0" layoutY="140.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
+            <Button layoutX="154.0" layoutY="204.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
+            <Button layoutX="154.0" layoutY="280.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
+            <Label layoutX="154.0" layoutY="104.0" text="Devam etmek için bir seçim yapınız" />
+            <Label layoutX="105.0" layoutY="69.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#170b0b">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="154.0" layoutY="356.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokCikti" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
+         <children>
+            <Label alignment="CENTER" layoutY="-2.0" prefWidth="500.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
