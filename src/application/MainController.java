@@ -115,7 +115,7 @@ public class MainController {
     private Button kok_cikti_geri;
 
     @FXML
-    private Button kok_cikti_kpt;
+    private Button kok_cikti_ac;
 
     @FXML
     void kayitet(ActionEvent event) throws IOException {
@@ -243,13 +243,14 @@ public class MainController {
 				count = 0;
 				counter++;
 			}
+			count2=0;
 			karar=true;
 			satir++;
 			counter=0;
 		}
 		String genelKayitlar="";
 		for (int i = 0; i < 10; i++) {
-			for (int k = 0; k < 5; k++) {
+			for (int k = 0; k < 7; k++) {
 				if (bilgiler2[i][k].equals("")) {
 					i=9;
 					break;
@@ -261,22 +262,22 @@ public class MainController {
 				String grafik="=";
 				if (sayac%7==6) {
 					int aa=10;
-					if (bilgiler2[i][4].equals("A")) {
+					if (bilgiler2[i][6].equals("A")) {
 						for (int l = 0; l < graf; l++) {
 							grafik+="=";
 						}
 					}
-					if (bilgiler2[i][4].equals("B")) {
+					if (bilgiler2[i][6].equals("B")) {
 						for (int l = 0; l < graf/2; l++) {
 							grafik+="=";
 						}
 					}
-					if (bilgiler2[i][4].equals("C")) {
+					if (bilgiler2[i][6].equals("C")) {
 						for (int l = 0; l < graf/4; l++) {
 							grafik+="=";
 						}
 					}
-					if (bilgiler2[i][4].equals("D")) {
+					if (bilgiler2[i][6].equals("D")) {
 						for (int l = 0; l < graf/8; l++) {
 							grafik+="=";
 						}
@@ -395,6 +396,7 @@ public class MainController {
 				count = 0;
 				counter++;
 			}
+			count2=0;
 			karar=true;
 			satir++;
 			counter=0;
@@ -628,6 +630,19 @@ public class MainController {
 			@Override
 			public void handle(MouseEvent event) {
 				kokMain.toFront();
+				
+			}
+		});
+       kok_cikti_ac.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				 try {
+					Runtime.getRuntime().exec(new String[] { "c:\\windows\\notepad.exe", file.getPath()});
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				
 			}
 		});
