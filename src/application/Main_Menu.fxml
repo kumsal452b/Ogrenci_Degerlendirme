@@ -98,7 +98,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="llbl_durum" layoutX="20.0" layoutY="181.0" text="Label" />
+            <Label fx:id="kok_cikti_durum" layoutX="20.0" layoutY="181.0" text="Label" />
             <Button fx:id="kok_cikti_geri" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" styleClass="button2" text="Geri" />
             <Button fx:id="kok_cikti_kpt" layoutX="257.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="213.0" styleClass="button3" text="Kpt" />
          </children>

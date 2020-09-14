@@ -1,5 +1,6 @@
 package application;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -17,6 +18,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -105,6 +107,15 @@ public class MainController {
     
     @FXML
     private Button kok_raporlama_kpt;
+    
+    @FXML
+    private Label kok_cikti_durum;
+
+    @FXML
+    private Button kok_cikti_geri;
+
+    @FXML
+    private Button kok_cikti_kpt;
 
     @FXML
     void kayitet(ActionEvent event) throws IOException {
@@ -136,8 +147,151 @@ public class MainController {
     }
 
     @FXML
-    void cikti(ActionEvent event) {
+    void cikti(ActionEvent event) throws IOException {
     	kokCikti.toFront();
+		String[][] bilgiler = new String[10][5];
+		String[][] bilgiler2 = new String[10][7];
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 5; j++) {
+				bilgiler[i][j] = "";
+				bilgiler2[i][j] = "";
+			}
+		}
+		int satir = 0;
+		int sutun = 0;
+		int ch = fileReader.read();
+		//okuma mekanizmasý yukarýda anlatýldý
+		while (ch != -1) {
+			if (ch != '-') {
+				if (ch != '*') {
+					if (sayac == 0) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 1) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 2) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 3) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+					if (sayac == 4) {
+						bilgiler[satir][sayac] += (char) ch;
+					}
+
+				} else {
+					sayac++;
+				}
+			} else {
+				sayac = 0;
+				satir++;
+			}
+			ch = fileReader.read();
+		}
+		int count = 0;
+		int counter = 0;
+		satir=0;
+		int a = 0,b = 0,c = 0;
+		int count2=0;
+		String durumS="";
+		boolean karar=true;
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 7; j++) {
+				count = 0;	
+				if (counter % 7 == 6 || counter % 7 == 5) {
+					if (karar) {
+						try {
+							a=(int) (Integer.parseInt(bilgiler[satir][3])*0.4);
+						} catch (Exception e) {
+							continue;
+						}
+						count2++;
+					}
+					else{
+						b=(int) (Integer.parseInt(bilgiler[satir][4])*0.6);
+						count2++;
+						c=a+b;
+						bilgiler2[satir][j-1]=c+"";
+					}
+					
+					karar=false;
+			
+					if (count2==2) {
+//						not=c+"";
+						if (100>= c && c>75) {
+							durumS="A";
+						}
+						else if (75>= c && c>50) {
+							durumS="B";
+						}
+						else if (50>= c && c>25) {
+							durumS="C";
+						}
+						else if (25>= c && c>0) {
+							durumS="D";
+						}
+						else {
+							durumS="Belirsiz";
+						}
+						bilgiler2[satir][j]=durumS;
+					}
+					
+				}else {
+					bilgiler2[satir][j]=bilgiler[satir][j];
+				}
+				count = 0;
+				counter++;
+			}
+			karar=true;
+			satir++;
+			counter=0;
+		}
+		String genelKayitlar="";
+		for (int i = 0; i < 10; i++) {
+			for (int k = 0; k < 5; k++) {
+				if (bilgiler2[i][k].equals("")) {
+					i=9;
+					break;
+				}
+				int graf=16;
+				
+				genelKayitlar+=bilgiler2[i][k];
+				genelKayitlar+=" ";
+				String grafik="=";
+				if (sayac%7==6) {
+					int aa=10;
+					if (bilgiler2[i][4].equals("A")) {
+						for (int l = 0; l < graf; l++) {
+							grafik+="=";
+						}
+					}
+					if (bilgiler2[i][4].equals("B")) {
+						for (int l = 0; l < graf/2; l++) {
+							grafik+="=";
+						}
+					}
+					if (bilgiler2[i][4].equals("C")) {
+						for (int l = 0; l < graf/4; l++) {
+							grafik+="=";
+						}
+					}
+					if (bilgiler2[i][4].equals("D")) {
+						for (int l = 0; l < graf/8; l++) {
+							grafik+="=";
+						}
+					}
+					genelKayitlar+=grafik;
+				}
+				sayac++;
+			}
+			genelKayitlar+=" *";
+			
+		}
+		fileWriter2.write(genelKayitlar);
+		fileWriter2.close();
+		kok_cikti_durum.setText("Öðrencilere ait grafik verileri "+file.getPath()+" konumuna baþarýlý bir þekilde kaydedildi.");
+    	
 
     }
 
@@ -425,9 +579,16 @@ public class MainController {
     	piachart.setData(piechartdata);
     }
 
+    File file;
+    FileWriter fileWriter;
+    PrintWriter fileWriter2;
     @FXML
-    void initialize() throws FileNotFoundException {
+    void initialize() throws IOException {
     	fileReader = new FileReader("D:\\ogrbilgileri3.txt");
+		file=new File("D:\\ogrencibilgivegraf.txt");
+		fileWriter=new FileWriter(file);
+		fileWriter2=new PrintWriter(fileWriter);
+    	
         kokMain.toFront();
         kayit=FXCollections.observableArrayList();
         piechartdata=FXCollections.observableArrayList();
@@ -455,6 +616,14 @@ public class MainController {
 			}
 		});
         kok_raporlama_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+			@Override
+			public void handle(MouseEvent event) {
+				kokMain.toFront();
+				
+			}
+		});
+        kok_cikti_geri.setOnMouseClicked(new EventHandler<MouseEvent>() {
 
 			@Override
 			public void handle(MouseEvent event) {
