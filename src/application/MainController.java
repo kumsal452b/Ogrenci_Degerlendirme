@@ -291,7 +291,7 @@ public class MainController {
 		}
 		fileWriter2.write(genelKayitlar);
 		fileWriter2.close();
-		kok_cikti_durum.setText("Öðrencilere ait grafik verileri "+file.getPath()+" konumuna baþarýlý bir þekilde kaydedildi.");
+		kok_cikti_durum.setText("Öðrencilere ait grafik verileri "+file.getPath()+"\n"+" konumuna baþarýlý bir þekilde kaydedildi.");
     	
 
     }

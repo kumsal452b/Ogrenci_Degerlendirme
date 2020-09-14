@@ -77,20 +77,6 @@
             <Button fx:id="kok_kayit_kpt" layoutX="123.0" layoutY="403.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="kokMain" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
-         <children>
-            <Button layoutX="154.0" layoutY="140.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
-            <Button layoutX="154.0" layoutY="204.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
-            <Button layoutX="154.0" layoutY="280.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
-            <Label layoutX="154.0" layoutY="104.0" text="Devam etmek için bir seçim yapınız" />
-            <Label layoutX="105.0" layoutY="69.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#170b0b">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Button layoutX="154.0" layoutY="356.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="kokCikti" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
          <children>
             <Label alignment="CENTER" layoutY="-2.0" prefWidth="500.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
@@ -98,9 +84,32 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="kok_cikti_durum" layoutX="20.0" layoutY="181.0" text="Label" wrapText="true" />
+            <Label fx:id="kok_cikti_durum" layoutX="20.0" layoutY="181.0" text="Label" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
             <Button fx:id="kok_cikti_ac" layoutX="257.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="213.0" styleClass="button3" text="Dosyayı Aç" />
             <Button fx:id="kok_cikti_geri" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" styleClass="button2" text="Geri" />
+            <Label layoutX="20.0" layoutY="292.0" text="Dosyayı açmak için Dosyayı Aç butonunu kullanın" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="kokMain" prefHeight="530.0" prefWidth="500.0" styleClass="anchorpane">
+         <children>
+            <Button layoutX="154.0" layoutY="324.0" mnemonicParsing="false" onAction="#raporlama" prefHeight="55.0" prefWidth="170.0" text="Raporlama İşlemleri" />
+            <Button layoutX="154.0" layoutY="230.0" mnemonicParsing="false" onAction="#hesaplama" prefHeight="65.0" prefWidth="170.0" text="Hesaplama İşlemleri" />
+            <Button layoutX="154.0" layoutY="147.0" mnemonicParsing="false" onAction="#kayit" prefHeight="65.0" prefWidth="170.0" text="Öğrenci Kayıt İşlemleri" />
+            <Label layoutX="154.0" layoutY="104.0" text="Devam etmek için bir seçim yapınız" />
+            <Label layoutX="105.0" layoutY="69.0" text="Öğrenci değerlendirme sistemine hoş geldiniz." textFill="#170b0b">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="154.0" layoutY="402.0" mnemonicParsing="false" onAction="#cikti" prefHeight="55.0" prefWidth="170.0" text="Çıktı İşlemleri" />
          </children>
       </AnchorPane>
    </children>
