@@ -27,5 +27,7 @@
 .button3{
 	-fx-background-color:radial-gradient( focus-angle 0.0deg, focus-distance 0.0%, center 50.0% 50.0%, radius 100.0%, rgb(19,199,66) 0.0, rgb(0,0,0) 100.0 );
 	-fx-text-fill: white ;
-	
+}
+.piechart{
+	-fx-text-fill: white;
 }
