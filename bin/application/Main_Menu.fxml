@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="kokMain" prefHeight="410.0" prefWidth="450.0" styleClass="anchorpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <AnchorPane fx:id="kokRapor" prefHeight="500.0" prefWidth="500.0" styleClass="anchorpane">
@@ -63,16 +62,16 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="textad" layoutX="176.0" layoutY="125.0"/>
-            <Label layoutX="176.0" layoutY="101.0" text="Ad"/>
-            <TextField fx:id="textsoyad" layoutX="176.0" layoutY="197.0"/>
-            <Label layoutX="176.0" layoutY="172.0" text="Soyad"/>
-            <TextField fx:id="textnumara" layoutX="176.0" layoutY="261.0"/>
+            <TextField fx:id="textad" layoutX="176.0" layoutY="125.0" />
+            <Label layoutX="176.0" layoutY="101.0" text="Ad" />
+            <TextField fx:id="textsoyad" layoutX="176.0" layoutY="197.0" />
+            <Label layoutX="176.0" layoutY="172.0" text="Soyad" />
+            <TextField fx:id="textnumara" layoutX="176.0" layoutY="261.0" />
             <Label layoutX="176.0" layoutY="236.0" text="Numara" />
-            <TextField fx:id="textvize" layoutX="176.0" layoutY="318.0"/>
+            <TextField fx:id="textvize" layoutX="176.0" layoutY="318.0" />
             <Label layoutX="180.0" layoutY="295.0" text="Vize" />
-            <TextField fx:id="textfinal" layoutX="176.0" layoutY="375.0"/>
-            <Label layoutX="176.0" layoutY="351.0" text="Final"/>
+            <TextField fx:id="textfinal" layoutX="176.0" layoutY="375.0" />
+            <Label layoutX="176.0" layoutY="351.0" text="Final" />
             <Button layoutX="335.0" layoutY="125.0" mnemonicParsing="false" onAction="#kayitet" prefHeight="274.0" prefWidth="42.0" styleClass="button1" text="Kayit" />
             <Button fx:id="kok_kayit_geri" layoutX="123.0" layoutY="124.0" mnemonicParsing="false" prefHeight="274.0" prefWidth="42.0" styleClass="button2" text="Geri" />
             <Button fx:id="kok_kayit_kpt" layoutX="123.0" layoutY="403.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="255.0" styleClass="button3" text="Kapat" />
@@ -96,9 +95,12 @@
          <children>
             <Label alignment="CENTER" layoutY="-2.0" prefWidth="500.0" text="Çıktı İşlemleri" textFill="#f3ffa8">
                <font>
-                  <Font size="20.0"/>
+                  <Font size="20.0" />
                </font>
             </Label>
+            <Label fx:id="llbl_durum" layoutX="20.0" layoutY="181.0" text="Label" />
+            <Button fx:id="kok_cikti_geri" layoutX="20.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" styleClass="button2" text="Geri" />
+            <Button fx:id="kok_cikti_kpt" layoutX="257.0" layoutY="461.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="213.0" styleClass="button3" text="Kpt" />
          </children>
       </AnchorPane>
    </children>
